@@ -5,10 +5,10 @@ export const computadorList = props => (
     <List {...props}>
         <Datagrid>
             <TextField source="id" />
-            <TextField source="modelo" />
-            <TextField source="ano" />
-            <TextField source="gabinete.id" />
-            <TextField source="documento.id" />
+            <TextField source="tipo" />
+            <TextField source="fabricante" />
+            <TextField source="gabinete" />
+            <TextField source="documento" />
             <EditButton />
         </Datagrid>
     </List>
@@ -19,13 +19,13 @@ export const computadorEdit = props => (
     <Edit {...props}>
         <SimpleForm>
             <TextInput disabled source="id" />
-            <TextInput source="modelo" />
-            <NumberInput source="ano" />
+            <TextInput source="tipo" />
+            <TextInput source="fabricante" />
             <ReferenceInput label="Gabinete" source="gabinete.id" reference="gabinete">
-                <SelectInput optionText="marca" opt/>
+                <SelectInput optionText="modelo" opt/>
             </ReferenceInput>
             <TextInput source="documento.montado_por" />
-            <NumberInput source="documento.cod_montagem" />
+            <TextInput source="documento.cod_montagem" />
         </SimpleForm>
     </Edit>
 );
@@ -33,8 +33,8 @@ export const computadorEdit = props => (
 export const computadorCreate = props => (
     <Create {...props}>
         <SimpleForm>
-            <TextInput source="modelo" />
-            <NumberInput source="ano" />
+            <TextInput source="tipo" />
+            <TextInput source="fabricante" />
         </SimpleForm>
     </Create>
 );
