@@ -24,8 +24,8 @@ export const computadorEdit = props => (
             <ReferenceInput label="Gabinete" source="gabinete.id" reference="gabinete">
                 <SelectInput optionText="modelo" opt/>
             </ReferenceInput>
-            <TextInput source="documento.montado_por" />
-            <TextInput source="documento.cod_montagem" />
+            <TextInput source="documento.montado_por" label="montado por:"/>
+            <TextInput source="documento.cod_montagem" label="codigo de montagem:" />
         </SimpleForm>
     </Edit>
 );
@@ -35,6 +35,11 @@ export const computadorCreate = props => (
         <SimpleForm>
             <TextInput source="tipo" />
             <TextInput source="fabricante" />
+            <ReferenceInput label="Gabinete" source="gabinete.id" reference="gabinete">
+                <SelectInput optionText="modelo" opt/>
+            </ReferenceInput>
+            <TextInput source="documento.montado_por" label="montado por:"/>
+            <TextInput source="documento.cod_montagem" label="codigo de montagem:" />
         </SimpleForm>
     </Create>
 );

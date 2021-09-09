@@ -30,9 +30,14 @@ export const pecaEdit = props => (
 
 export const pecaCreate = props => (
     <Create {...props}>
-        <SimpleForm>
+         <SimpleForm>
             <TextInput source="nome" />
             <TextInput source="tipo" />
+            <ArrayInput source="gabinete">
+                <SimpleFormIterator>
+                    <NumberInput source="id" />
+                </SimpleFormIterator>
+            </ArrayInput>
         </SimpleForm>
     </Create>
 );
