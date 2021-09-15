@@ -12,8 +12,14 @@ import { createMuiTheme } from '@material-ui/core/styles';
 const theme = createMuiTheme({
   palette: {
     type: 'dark', // Switching the dark mode on is a single property value change.
+    secondary: {
+      light: '#2D2D30',
+      main: '#2D2D30',
+      dark: '#2D2D30',
   },
-  
+
+  },
+ 
 });
 
 const dataProvider = jsonServerProvider('http://localhost:8080');

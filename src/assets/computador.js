@@ -7,8 +7,9 @@ export const computadorList = props => (
             <TextField source="id" />
             <TextField source="tipo" />
             <TextField source="fabricante" />
-            <TextField source="gabinete" />
-            <TextField source="documento" />
+            <TextField source="gabinete.modelo" label="Gabinete da montagem" />
+            <TextField source="documento.montado_por" label="DOC: Tecnico da montagem" />
+            <TextField source="documento.cod_montagem" label="DOC: Código da montagem" />
             <EditButton />
         </Datagrid>
     </List>
